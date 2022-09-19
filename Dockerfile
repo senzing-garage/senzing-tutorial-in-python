@@ -17,8 +17,8 @@ ENV SENZING_ACCEPT_EULA=${SENZING_ACCEPT_EULA} \
     SENZING_APT_REPOSITORY_NAME=${SENZING_APT_REPOSITORY_NAME} \
     SENZING_APT_REPOSITORY_URL=${SENZING_APT_REPOSITORY_URL}
 
-LABEL Name="roncewind/sz-jupyter" \
-      Maintainer="ron@senzing.com" \
+LABEL Name="senzing/senzing-tutorial-in-python" \
+      Maintainer="support@senzing.com" \
       Version="0.0.0"
 
 # Run as "root" for system installation.
