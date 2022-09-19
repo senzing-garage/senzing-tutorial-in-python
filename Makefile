@@ -6,7 +6,7 @@ GIT_VERSION := $(shell git describe --always --tags --long --dirty | sed -e 's/\
 # Docker variables
 
 DOCKER_IMAGE_TAG ?= $(GIT_REPOSITORY_NAME):$(GIT_VERSION)
-DOCKER_IMAGE_NAME := roncewind/sz-jupyter
+DOCKER_IMAGE_NAME := senzing/senzing-tutorial-in-python
 
 # -----------------------------------------------------------------------------
 # The first "make" target runs as default.
