@@ -1,9 +1,9 @@
-# sz-jupyter is a work in progress
+# senzing-tutorial-in-python is a work in progress
 
 # TL;DR
 
 Interactively learn the Senzing API with Jupyter.
-- Run: `docker run -it -p 8888:8888 --rm --name jupyter roncewind/sz-jupyter`
+- Run: `docker run -it -p 8888:8888 --rm --name jupyter senzing/senzing-tutorial-in-python`
 - Open link (cmd-click on mac)
 
 # Intro (TODO)
@@ -54,13 +54,13 @@ docker run \
     --publish 8888:8888 \
     --rm \
     --name jupyter \
-    roncewind/sz-jupyter
+    senzing/senzing-tutorial-in-python
 ```
 
 or a more concisely:
 
 ```console
-docker run -it -p 8888:8888 --rm --name jupyter roncewind/sz-jupyter
+docker run -it -p 8888:8888 --rm --name jupyter senzing/senzing-tutorial-in-python
 ```
 
 ## Run with local directory mounted
@@ -81,16 +81,16 @@ docker run \
     --rm \
     --name jupyter \
     --volume $(pwd):/home/jovyan/work \
-    roncewind/sz-jupyter
+    senzing/senzing-tutorial-in-python
 ```
 
 or a more concisely:
 
 ```console
-docker run -it -p 8888:8888 --rm --name jupyter -v $(pwd):/home/jovyan/work roncewind/sz-jupyter
+docker run -it -p 8888:8888 --rm --name jupyter -v $(pwd):/home/jovyan/work senzing/senzing-tutorial-in-python
 ```
 
-docker run -it -p 8888:8888 --rm --name jupyter -v ./senzing-examples:/home/jovyan/work/senzing-examples -v ./senzing-tutorials:/home/jovyan/work/senzing-tutorials roncewind/sz-jupyter
+docker run -it -p 8888:8888 --rm --name jupyter -v ./senzing-examples:/home/jovyan/work/senzing-examples -v ./senzing-tutorials:/home/jovyan/work/senzing-tutorials senzing/senzing-tutorial-in-python
 
 This mounts the current directory (`pwd`) as the `work` directory in the container.  Any
 files saved into that directory will be saved outside the container and therefore
