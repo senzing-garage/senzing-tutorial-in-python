@@ -1,8 +1,11 @@
-# senzing-tutorial-in-python is a work in progress
+# senzing-tutorial-in-python
+
+
+# work in progress
 
 # TL;DR
 
-Interactively learn the Senzing API with Jupyter.
+Interactively learn the Senzing API with Jupyter Labs.
 - Run: `docker run -it -p 8888:8888 --rm --name jupyter senzing/senzing-tutorial-in-python`
 - Open link (cmd-click on mac)
 
@@ -25,7 +28,7 @@ What story am I telling?
 - bad guy hunting?
 - ???
 
-- Tutorial 1 - add a record
+- Tutorial 1 - The story thus far and add a record
 - Tutorial 2 - add a datasource
 - Tutorial 3 - add truthset
 - Tutorial 4 - search
