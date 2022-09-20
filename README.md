@@ -87,7 +87,7 @@ docker run \
     senzing/senzing-tutorial-in-python
 ```
 
-or a more concisely:
+or more concisely:
 
 ```console
 docker run -it -p 8888:8888 --rm --name jupyter -v $(pwd):/home/jovyan/work senzing/senzing-tutorial-in-python
@@ -102,6 +102,27 @@ the `$(pwd)` in the command.  EG `...-v /home/user/my/stuff:/home/jovyan/work`. 
 the local directory can be mounted in any directory.  EG `...-v /home/user/my/stuff:/home/jovyan/stuff`.
 Multiple volumes may also be defined with addition `-v` parameters.  Note:  you must
 use an absolute path to your host(local) directory.
+
+## Exec into running Docker container
+
+Using the name assigned to the container with the `--name` parameter, `jupyter` in the
+examples above.  One can connect to the running container in order to have a command-line.
+From the command-line there are Senzing tools available for various purposes.  To
+connect to the container use:
+
+```console
+docker exec \
+    --interactive \
+    --tty \
+    jupyter \
+    /bin/bash
+```
+
+or more concisely:
+
+```console
+docker exec -it jupyter /bin/bash
+```
 
 # Versioning
 
