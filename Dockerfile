@@ -77,15 +77,14 @@ ENV LANGUAGE=C \
     PYTHONPATH=${PYTHONPATH}/opt/senzing/g2/python:/opt/senzing/g2/sdk/python \
     PYTHONUNBUFFERED=1 \
     SENZING_DOCKER_LAUNCHED=true \
-    SENZING_ENGINE_CONFIGURATION_JSON='{
-       "PIPELINE": {
-              "CONFIGPATH": "/etc/opt/senzing",
-              "SUPPORTPATH": "/opt/senzing/data",
-              "RESOURCEPATH": "/opt/senzing/g2/resources"
-       },
-       "SQL": {
-              "CONNECTION": "sqlite3://na:na@/var/opt/senzing/sqlite/G2C.db"
-       }
+    SENZING_ENGINE_CONFIGURATION_JSON='{ \
+       "PIPELINE": { \
+              "CONFIGPATH": "/etc/opt/senzing", \
+              "SUPPORTPATH": "/opt/senzing/data", \
+              "RESOURCEPATH": "/opt/senzing/g2/resources" \
+       }, \
+       "SQL": { \
+              "CONNECTION": "sqlite3://na:na@/var/opt/senzing/sqlite/G2C.db" \
+       } \
     }' \
-    SENZING_SKIP_DATABASE_PERFORMANCE_TEST=true \
-    SENZING_SQL_CONNECTION="sqlite3://na:na@/var/opt/senzing/sqlite/G2C.db"
+    SENZING_SKIP_DATABASE_PERFORMANCE_TEST=true
