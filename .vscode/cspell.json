@@ -1,0 +1,44 @@
+{
+  // Version of the setting file.  Always 0.2
+  "version": "0.2",
+  // language - current active spelling language
+  "language": "en",
+  // words - list of words to be always considered correct
+  "words": [
+    "alnum",
+    "bytearray",
+    "CCLA",
+    "CODEOWNER",
+    "CONFIGPATH",
+    "dpkg",
+    "DSRC",
+    "ERRULE",
+    "ICLA",
+    "ipynb",
+    "ipython",
+    "kernelspec",
+    "libpq",
+    "nbconvert",
+    "nbformat",
+    "pring",
+    "psycopg",
+    "pygments",
+    "PYTHONPATH",
+    "PYTHONUNBUFFERED",
+    "reinit",
+    "RESOURCEPATH",
+    "Robart",
+    "rootfs",
+    "Senzing",
+    "senzingapi",
+    "senzingrepo",
+    "stackoverflow",
+    "SUPPORTPATH",
+    "toplevel",
+    "truthset",
+  ],
+  "ignorePaths": [
+    ".git/**",
+    ".gitignore"
+  ]
+}
