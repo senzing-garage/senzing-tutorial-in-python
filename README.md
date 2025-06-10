@@ -1,13 +1,9 @@
 # senzing-tutorial-in-python
 
-If you are beginning your journey with
-[Senzing](https://senzing.com/),
-please start with
-[Senzing Quick Start guides](https://docs.senzing.com/quickstart/).
+If you are beginning your journey with [Senzing],
+please start with [Senzing Quick Start guides].
 
-You are in the
-[Senzing Garage](https://github.com/senzing-garage)
-where projects are "tinkered" on.
+You are in the [Senzing Garage] where projects are "tinkered" on.
 Although this GitHub repository may help you understand an approach to using Senzing,
 it's not considered to be "production ready" and is not considered to be part of the Senzing product.
 Heck, it may not even be appropriate for your application of Senzing!
@@ -17,6 +13,7 @@ Heck, it may not even be appropriate for your application of Senzing!
 # TL;DR
 
 Interactively learn the Senzing API with Jupyter Labs.
+
 - Run: `docker run -it -p 8888:8888 --rm --name jupyter senzing/senzing-tutorial-in-python`
 - Open link (cmd-click on mac)
 
@@ -25,9 +22,9 @@ Interactively learn the Senzing API with Jupyter Labs.
 - Senzing library
 - Purpose
 - Examples vs tutorials?
-    - Examples show how to do one thing
-    - Tutorials form a story that weave examples together
-    - Tutorial should have a final "product"
+  - Examples show how to do one thing
+  - Tutorials form a story that weave examples together
+  - Tutorial should have a final "product"
 
 ## Tutorial list (TODO)
 
@@ -58,7 +55,7 @@ What story am I telling?
 ## Run Jupyter
 
 Any changes made in a container exists only as long as the container is running.
-Re-running the docker image will clear any work done and start from scratch.  To
+Re-running the docker image will clear any work done and start from scratch. To
 persist work locally, take a look at the [Run with local directory mounted](#run-with-local-directory-mounted) section.
 
 ```console
@@ -81,7 +78,7 @@ docker run -it -p 8888:8888 --rm --name jupyter senzing/senzing-tutorial-in-pyth
 
 Any changes made in a container exists only as long as the container is running.
 In order for changes to survive stopping and re-running the docker image, they
-must be saved to the host.  To do this mount a directory into the container when
+must be saved to the host. To do this mount a directory into the container when
 it is run.
 
 Map the current directory into the Docker container so that changes to notebooks are
@@ -94,36 +91,41 @@ docker run \
     --publish 8888:8888 \
     --rm \
     --name jupyter \
-    --volume $(pwd):/home/jovyan/work \
+    --volume $(pwd):/home/user/work \
     senzing/senzing-tutorial-in-python
 ```
 
 or a more concisely:
 
 ```console
-docker run -it -p 8888:8888 --rm --name jupyter -v $(pwd):/home/jovyan/work senzing/senzing-tutorial-in-python
+docker run -it -p 8888:8888 --rm --name jupyter -v $(pwd):/home/user/work senzing/senzing-tutorial-in-python
 ```
 
-docker run -it -p 8888:8888 --rm --name jupyter -v ./senzing-examples:/home/jovyan/work/senzing-examples -v ./senzing-tutorials:/home/jovyan/work/senzing-tutorials senzing/senzing-tutorial-in-python
+docker run -it -p 8888:8888 --rm --name jupyter -v ./senzing-examples:/home/user/work/senzing-examples -v ./senzing-tutorials:/home/user/work/senzing-tutorials senzing/senzing-tutorial-in-python
 
-This mounts the current directory (`pwd`) as the `work` directory in the container.  Any
+This mounts the current directory (`pwd`) as the `work` directory in the container. Any
 files saved into that directory will be saved outside the container and therefore
-not lost when the container is brought down.  Any directory can be substituted for
-the `$(pwd)` in the command.  EG `...-v /home/user/my/stuff:/home/jovyan/work`.  Likewise,
-the local directory can be mounted in any directory.  EG `...-v /home/user/my/stuff:/home/jovyan/stuff`.
-Multiple volumes may also be defined with addition `-v` parameters.  Note:  you must
+not lost when the container is brought down. Any directory can be substituted for
+the `$(pwd)` in the command. EG `...-v /home/user/my/stuff:/home/user/work`. Likewise,
+the local directory can be mounted in any directory. EG `...-v /home/user/my/stuff:/home/user/stuff`.
+Multiple volumes may also be defined with addition `-v` parameters. Note: you must
 use an absolute path to your host(local) directory.
 
 # Versioning
 
-A small note about versioning.  The releases of this repo are versioned following
-[Semantic Versioning](https://semver.org/spec/v2.0.0.html).  The caveat is that
-the release follow Senzing versioning for major and minor with patch versions
-specific to this repo.  The rationale being that the tutorials and examples herein
-should work on any patch level of the major and minor versions of Senzing.
+A small note about versioning. The releases of this repo are versioned following
+[Semantic Versioning]. The caveat is that the release follow Senzing versioning for
+major and minor with patch versions specific to this repo. The rationale being that
+the tutorials and examples herein should work on any patch level of the major and
+minor versions of Senzing.
 
 # TODO:
 
 - API reference into image
 - update links to API reference
 - Build switch for java and python?
+
+[Semantic Versioning]: https://semver.org/spec/v2.0.0.html
+[Senzing Garage]: https://github.com/senzing-garage
+[Senzing Quick Start guides]: https://docs.senzing.com/quickstart/
+[Senzing]: https://senzing.com/
